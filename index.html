@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myFirstApp">
   <head>
     <meta charset="utf-8">
-    <title>Coursera</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Dependency Injection in Javascript</title>
   </head>
 
   <body>
-    <h1>ALoha!</h1>
+    <h1>Dependency Injection in Javascript and Angularjs</h1>
+    <div ng-controller="DIcontroller">
+       <input type="text"  ng-model ="name" ng-blur="upper();">
+       Message is  : {{sayMsg()}}
+
+    </div>
   </body>
 </html>
