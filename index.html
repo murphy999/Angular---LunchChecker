@@ -1,18 +1,44 @@
-<!DOCTYPE html>
-<html ng-app="myFirstApp">
+
+<!doctype html>
+<html lang="en" ng-app="Assignment1">
+
   <head>
-    <meta charset="utf-8">
+    <title>Lunch Items</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    <title>Dependency Injection in Javascript</title>
   </head>
 
-  <body>
-    <h1>Dependency Injection in Javascript and Angularjs</h1>
-    <div ng-controller="DIcontroller">
-       <input type="text"  ng-model ="name" ng-blur="upper();">
-       Message is  : {{sayMsg()}}
+<body>
+   <div class="container">
+     <h1>Lunch Checker</h1>
+        <div ng-controller="Controller">
+            <div class="form-group">
+                <input id="lunch-menu" type="text"
+                placeholder="list comma separated dishes you  had for lunch"
+                class="form-control"
+                ng-model = "food">
+            </div>
+            <div>
+                <p class="text-muted"> We do NOT consider and empty item, i.e., , , as an item towards to the count.</p>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" ng-click="checkItem()">Check If Too Much</button>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div
+                    class="form-group message"
+                    style="color:{{colour}}; border: 1px solid {{colour}}"
+                    align="center">
+                        <span>{{value}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
 
-    </div>
-  </body>
+</body>
 </html>
