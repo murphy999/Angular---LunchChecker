@@ -1,2 +1,2 @@
-# angular-js
-coursera practice.
+AngularJS
+index.html -LUNCH ITEM LIST
