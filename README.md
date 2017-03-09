@@ -1,2 +1,0 @@
-# angular-js
-coursera practice.
